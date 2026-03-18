@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black: #141414;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+/* Scrollbar styles moved to specific components or classes for better control */
+
+html,
+body {
+  height: 100%;
+  background-color: #141414 !important;
+}
+
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif !important;
+}
+
+/* Button default styles */
+button {
+  cursor: pointer;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom Scrollbar - Global & Specific */
+::-webkit-scrollbar,
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track,
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb,
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover,
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 100s linear infinite;
+}
+
+/* @keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-55px);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float infinite ease-in-out;
+} */
+
+@keyframes float {
+  0% { transform: translateY(0); opacity:0 }
+  50% { opacity:1 }
+  100% { transform: translateY(-40px); opacity:0 }
+}
+
+.animate-float{
+  animation: float 2s linear infinite;
+}
