@@ -3,7 +3,7 @@ import heroBg from '../../../assets/images/edInai/Admin/Hero.webp';
 
 const AdminHero = ({ id }) => {
   return (
-    <section id={id} className="w-full py-9 md:py-12 px-4 md:px-6 flex justify-center">
+    <section id={id} className="w-full  py-9 md:py-12 px-4 md:px-6 flex justify-center">
       <div
         className="w-full max-w-6xl  rounded-[7px] md:rounded-[10px] overflow-hidden relative"
         style={{
